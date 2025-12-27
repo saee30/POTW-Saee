@@ -27,7 +27,7 @@ int palindromeIndex(string s) {
             }
             else
             {
-               int k=i+1;
+               int k=i+1;  //remove left element
                int n=j;
                
                while(k<n)
@@ -42,23 +42,24 @@ int palindromeIndex(string s) {
                }
                if(c==0)
                return i;
-               
-              k=i;
-              n=j-1;
-              c=0;
+
+                //removing right element
+               k=i;     
+               n=j-1;
+               c=0;
               
-              while(k<n)
-              { 
-                 if(s[k]!=s[n])
-                 {
+               while(k<n)
+               { 
+                  if(s[k]!=s[n])
+                  {
                      c++;
                      break;
-                 }
-                 k++;
-                 n--;
-              }
-              if(c==0)
-                return j;               
+                  }
+                  k++;
+                  n--;
+               }
+               if(c==0)
+               return j;               
             }
             
         }
